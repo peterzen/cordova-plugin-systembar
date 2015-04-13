@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.gorzio.plugin.SystembarPlugin"
+        version="0.7.0">
+
+  <name>SystembarPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/systembarPlugin.js" target="js/systembarPlugin.js"/>
+
+  <js-module src="www/systembarPlugin.js" name="systembar">
+    <clobbers target="systembar" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="SystembarPlugin">
+        <param name="android-package" value="com.gorzio.plugin.SystembarPlugin"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/SystembarPlugin.java" target-dir="src/com/gorzio/plugin/"/>
+  </platform>
+
+
+  <platform name="ios">
+  </platform>
+
+  <platform name="wp7">
+  </platform>
+
+
+</plugin>

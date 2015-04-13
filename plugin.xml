@@ -27,11 +27,5 @@
   </platform>
 
 
-  <platform name="ios">
-  </platform>
-
-  <platform name="wp7">
-  </platform>
-
 
 </plugin>
